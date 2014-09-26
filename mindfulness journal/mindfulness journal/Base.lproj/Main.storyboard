@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A329r" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="nN3-LW-RAw">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A329r" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
@@ -7,7 +7,7 @@
         <!--new prompt-->
         <scene sceneID="OlN-KI-EL1">
             <objects>
-                <viewController id="kAY-4Q-UtZ" sceneMemberID="viewController">
+                <viewController id="kAY-4Q-UtZ" customClass="JournalPromptViewController" customModule="mindfulness_journal" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="5ss-ao-YjA"/>
                         <viewControllerLayoutGuide type="bottom" id="fsh-Ol-3BA"/>
@@ -35,7 +35,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Wm9-VP-JdX" kind="push" id="ztH-LU-bmv"/>
+                                    <segue destination="Wm9-VP-JdX" kind="push" id="8lS-Sb-j38"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -43,6 +43,11 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="new prompt" id="fKM-mH-rXz"/>
                     <navigationItem key="navigationItem" id="Z29-2P-tBe"/>
+                    <connections>
+                        <outlet property="doneButton" destination="kls-tA-VeM" id="8Df-Qv-fMK"/>
+                        <outlet property="journalPrompt" destination="pwd-H7-sDd" id="mWV-oQ-tPu"/>
+                        <outlet property="journalText" destination="tJu-d1-O5E" id="Ebw-IR-zJq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uwn-2f-HJW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -51,43 +56,37 @@
         <!--mindfulness journal-->
         <scene sceneID="sne-Nx-EWA">
             <objects>
-                <tableViewController id="Wm9-VP-JdX" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" indicatorStyle="white" dataMode="prototypes" style="grouped" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="mRu-Cd-HyE">
+                <tableViewController id="Wm9-VP-JdX" customClass="EntriesTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" indicatorStyle="white" dataMode="prototypes" style="plain" allowsMultipleSelection="YES" rowHeight="82" sectionHeaderHeight="22" sectionFooterHeight="22" id="mRu-Cd-HyE">
                         <rect key="frame" x="0.0" y="64" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.8740610088407289" green="0.92700892556822578" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="separatorColor" red="0.36184883868673223" green="0.67554351953551239" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="sectionIndexColor" red="0.1078630121" green="0.28619873810000002" blue="0.54647972469999995" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="sectionIndexBackgroundColor" red="0.9009381753977157" green="1" blue="0.98599356496561619" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="sectionIndexTrackingBackgroundColor" red="0.36184883870000001" green="0.67554351950000002" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="rVH-B5-fqX">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="entry" id="uAF-pt-86M" customClass="NewJournalCellTableViewCell" customModule="mindfulness_journal" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rVH-B5-fqX" id="YNQ-Go-nJj">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uAF-pt-86M" id="KtL-Ti-l9v">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="wow" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NOA-WE-sJG">
-                                            <rect key="frame" x="22" y="8" width="36" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iu4-mg-jxw">
+                                            <rect key="frame" x="8" y="30" width="42" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
-                            </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="7Cg-33-rzW">
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="7Cg-33-rzW" id="Fdt-NS-wcm">
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="bKh-6d-8cD">
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bKh-6d-8cD" id="9X8-EP-3Qu">
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="journalName" destination="Iu4-mg-jxw" id="lUL-Vt-F3v"/>
+                                    <segue destination="7Yl-XL-Kig" kind="push" id="89G-yL-DzM"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
+                        <sections/>
                         <connections>
                             <outlet property="dataSource" destination="Wm9-VP-JdX" id="CTb-b7-wtf"/>
                             <outlet property="delegate" destination="Wm9-VP-JdX" id="htx-H8-Txv"/>
@@ -95,26 +94,29 @@
                     </tableView>
                     <tabBarItem key="tabBarItem" title="Today's Entries" id="1MF-4U-D2b"/>
                     <navigationItem key="navigationItem" title="mindfulness journal" id="GXm-9k-A0x">
-                        <barButtonItem key="leftBarButtonItem" title="P" id="4PT-B9-AyF">
+                        <barButtonItem key="leftBarButtonItem" title="P" id="NNw-BC-FIc">
                             <connections>
-                                <segue destination="kAY-4Q-UtZ" kind="push" id="E7f-z0-daB"/>
+                                <segue destination="kAY-4Q-UtZ" kind="push" identifier="prompt" id="LPO-i6-3TZ"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="B" id="8QA-SR-G6X">
                             <connections>
-                                <segue destination="UPM-8d-ygh" kind="push" id="w0A-6E-I6t"/>
+                                <segue destination="UPM-8d-ygh" kind="push" identifier="blank" id="IYP-0R-iQC"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="mRu-Cd-HyE" id="fpg-kb-wQH"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="26U-rs-jgU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="796" y="358"/>
+            <point key="canvasLocation" x="790" y="351"/>
         </scene>
         <!--new blank-->
         <scene sceneID="zpL-Ed-50b">
             <objects>
-                <viewController id="UPM-8d-ygh" sceneMemberID="viewController">
+                <viewController id="UPM-8d-ygh" customClass="BlankJournalViewController" customModule="mindfulness_journal" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="spq-vo-JUn"/>
                         <viewControllerLayoutGuide type="bottom" id="biD-rh-Mwy"/>
@@ -123,13 +125,28 @@
                         <rect key="frame" x="0.0" y="64" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="journal..." clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="lBJ-sl-3Bj">
+                                <rect key="frame" x="47" y="137" width="226" height="206"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <bool key="isElement" value="NO"/>
+                                </accessibility>
+                                <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="yes" spellCheckingType="yes" keyboardAppearance="alert"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="New entry" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="daZ-s1-M4n">
+                                <rect key="frame" x="47" y="91" width="78" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Vb-EG-0eY">
-                                <rect key="frame" x="139" y="344" width="43" height="30"/>
+                                <rect key="frame" x="139" y="363" width="43" height="30"/>
                                 <state key="normal" title="DONE">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Wm9-VP-JdX" kind="push" id="MfV-dX-OgW"/>
+                                    <segue destination="Wm9-VP-JdX" kind="push" id="0uB-Jz-Z1b"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -137,6 +154,11 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="new blank" id="vDY-NO-JyQ"/>
                     <navigationItem key="navigationItem" id="Nwe-1G-mj7"/>
+                    <connections>
+                        <outlet property="doneButton" destination="9Vb-EG-0eY" id="NNU-E2-fXw"/>
+                        <outlet property="entryTitle" destination="daZ-s1-M4n" id="N4Z-fP-XrW"/>
+                        <outlet property="journalText" destination="lBJ-sl-3Bj" id="qem-Fj-bh5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mEs-sL-0fG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -201,32 +223,18 @@
         <!--Journal History-->
         <scene sceneID="80G-T5-HfH">
             <objects>
-                <collectionViewController id="7co-LR-14P" sceneMemberID="viewController">
+                <collectionViewController id="7co-LR-14P" customClass="JournalCollectionViewController" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" indicatorStyle="white" dataMode="prototypes" id="fXx-t9-wxh">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.74175302600000004" green="0.88350206580000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="jny-YU-58M">
                             <size key="itemSize" width="50" height="50"/>
-                            <size key="headerReferenceSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
-                        <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="5Uu-hL-jjx">
-                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                </view>
-                            </collectionViewCell>
-                        </cells>
-                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gOz-fv-WvR">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
-                            <autoresizingMask key="autoresizingMask"/>
-                        </collectionReusableView>
+                        <cells/>
                         <connections>
                             <outlet property="dataSource" destination="7co-LR-14P" id="Xht-PJ-Dks"/>
                             <outlet property="delegate" destination="7co-LR-14P" id="eYt-tz-9M6"/>
@@ -241,7 +249,7 @@
         <!--Journal View-->
         <scene sceneID="Lij-lJ-NFl">
             <objects>
-                <viewController title="Journal View" id="7Yl-XL-Kig" sceneMemberID="viewController">
+                <viewController title="Journal View" id="7Yl-XL-Kig" customClass="JournalEntryViewController" customModule="mindfulness_journal" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0ya-wt-LdE"/>
                         <viewControllerLayoutGuide type="bottom" id="Rf0-og-u7A"/>
@@ -271,47 +279,12 @@
             </objects>
             <point key="canvasLocation" x="889" y="-338"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="6fE-ko-bhY">
-            <objects>
-                <viewController id="nN3-LW-RAw" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="ZFm-U1-14b"/>
-                        <viewControllerLayoutGuide type="bottom" id="LID-pO-HrE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="deO-Cy-fXT">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N6t-id-Xb2">
-                                <rect key="frame" x="137" y="269" width="47" height="30"/>
-                                <state key="normal" title="ready?">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="49e-Tb-3d3" kind="modal" id="F4R-Uw-ZR2"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="wow so mindful!" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rPr-wb-5Dm">
-                                <rect key="frame" x="98" y="135" width="125" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="FIt-AD-nxO" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-379" y="-7"/>
-        </scene>
-        <!--Tab Bar Controller-->
+        <!--mindfulness journal-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
-                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                <tabBarController title="mindfulness journal" id="49e-Tb-3d3" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="LNi-df-rlg"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
@@ -334,8 +307,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="F4R-Uw-ZR2"/>
-        <segue reference="ZaT-vR-6RT"/>
+        <segue reference="8lS-Sb-j38"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.12877170214937528" green="0.1977996269133625" blue="1" alpha="1" colorSpace="calibratedRGB"/>
 </document>

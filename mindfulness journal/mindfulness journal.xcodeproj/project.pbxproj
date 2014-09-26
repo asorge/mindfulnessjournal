@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C7B6F9319D4FD10007CC82E /* JournalCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7B6F9219D4FD10007CC82E /* JournalCollectionViewController.swift */; };
+		0C7B6F9519D4FD21007CC82E /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7B6F9419D4FD21007CC82E /* SettingsViewController.swift */; };
+		0C7B6F9719D4FD2C007CC82E /* EntriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7B6F9619D4FD2C007CC82E /* EntriesTableViewController.swift */; };
+		0C7B6F9919D4FD3D007CC82E /* BlankJournalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7B6F9819D4FD3D007CC82E /* BlankJournalViewController.swift */; };
+		0C7B6F9B19D4FD49007CC82E /* JournalPromptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7B6F9A19D4FD49007CC82E /* JournalPromptViewController.swift */; };
+		0C7B6F9D19D4FE71007CC82E /* JournalEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7B6F9C19D4FE71007CC82E /* JournalEntryViewController.swift */; };
+		0C7B6F9F19D5080A007CC82E /* NewJournalCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7B6F9E19D5080A007CC82E /* NewJournalCellTableViewCell.swift */; };
 		0C929FD819D4E27D00CAC224 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C929FD719D4E27D00CAC224 /* AppDelegate.swift */; };
 		0C929FDA19D4E27D00CAC224 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C929FD919D4E27D00CAC224 /* FirstViewController.swift */; };
 		0C929FDC19D4E27D00CAC224 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C929FDB19D4E27D00CAC224 /* SecondViewController.swift */; };
@@ -27,6 +34,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C7B6F9219D4FD10007CC82E /* JournalCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JournalCollectionViewController.swift; sourceTree = "<group>"; };
+		0C7B6F9419D4FD21007CC82E /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		0C7B6F9619D4FD2C007CC82E /* EntriesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntriesTableViewController.swift; sourceTree = "<group>"; };
+		0C7B6F9819D4FD3D007CC82E /* BlankJournalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlankJournalViewController.swift; sourceTree = "<group>"; };
+		0C7B6F9A19D4FD49007CC82E /* JournalPromptViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JournalPromptViewController.swift; sourceTree = "<group>"; };
+		0C7B6F9C19D4FE71007CC82E /* JournalEntryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JournalEntryViewController.swift; sourceTree = "<group>"; };
+		0C7B6F9E19D5080A007CC82E /* NewJournalCellTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewJournalCellTableViewCell.swift; sourceTree = "<group>"; };
 		0C929FD219D4E27D00CAC224 /* mindfulness journal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "mindfulness journal.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C929FD619D4E27D00CAC224 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0C929FD719D4E27D00CAC224 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +100,13 @@
 				0C929FE019D4E27E00CAC224 /* Images.xcassets */,
 				0C929FE219D4E27E00CAC224 /* LaunchScreen.xib */,
 				0C929FD519D4E27D00CAC224 /* Supporting Files */,
+				0C7B6F9219D4FD10007CC82E /* JournalCollectionViewController.swift */,
+				0C7B6F9419D4FD21007CC82E /* SettingsViewController.swift */,
+				0C7B6F9619D4FD2C007CC82E /* EntriesTableViewController.swift */,
+				0C7B6F9819D4FD3D007CC82E /* BlankJournalViewController.swift */,
+				0C7B6F9A19D4FD49007CC82E /* JournalPromptViewController.swift */,
+				0C7B6F9C19D4FE71007CC82E /* JournalEntryViewController.swift */,
+				0C7B6F9E19D5080A007CC82E /* NewJournalCellTableViewCell.swift */,
 			);
 			path = "mindfulness journal";
 			sourceTree = "<group>";
@@ -215,9 +236,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C7B6F9B19D4FD49007CC82E /* JournalPromptViewController.swift in Sources */,
+				0C7B6F9919D4FD3D007CC82E /* BlankJournalViewController.swift in Sources */,
+				0C7B6F9319D4FD10007CC82E /* JournalCollectionViewController.swift in Sources */,
 				0C929FDC19D4E27D00CAC224 /* SecondViewController.swift in Sources */,
 				0C929FD819D4E27D00CAC224 /* AppDelegate.swift in Sources */,
+				0C7B6F9519D4FD21007CC82E /* SettingsViewController.swift in Sources */,
+				0C7B6F9F19D5080A007CC82E /* NewJournalCellTableViewCell.swift in Sources */,
 				0C929FDA19D4E27D00CAC224 /* FirstViewController.swift in Sources */,
+				0C7B6F9719D4FD2C007CC82E /* EntriesTableViewController.swift in Sources */,
+				0C7B6F9D19D4FE71007CC82E /* JournalEntryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,6 +437,7 @@
 				0C929FF519D4E27E00CAC224 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0C929FF619D4E27E00CAC224 /* Build configuration list for PBXNativeTarget "mindfulness journalTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +446,7 @@
 				0C929FF819D4E27E00CAC224 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
