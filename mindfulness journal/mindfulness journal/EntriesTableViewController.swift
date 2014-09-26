@@ -27,6 +27,23 @@ class EntriesTableViewController: UITableViewController, BlankJournalDelegate, J
     
     var entries: [JournalEntry] = []
     
+    @IBAction func unwindToSegue (segue : UIStoryboardSegue) {
+        var sourceOne: BlankJournalViewController = segue.sourceViewController as BlankJournalViewController
+        var newEntryOne = sourceOne.newEntry
+        if newEntryOne != nil {
+            entries.append(newEntryOne)
+            self.reloadInputViews()
+        }
+        
+        var sourceTwo: JournalPromptViewController = segue.sourceViewController as JournalPromptViewController
+        var newEntryTwo = sourceTwo.newEntry
+        if newEntryTwo != nil {
+            entries.append(newEntryTwo)
+            self.reloadInputViews()
+        }
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
        // self.tableView.delegate = self;
@@ -35,16 +52,7 @@ class EntriesTableViewController: UITableViewController, BlankJournalDelegate, J
         // Do any additional setup after loading the view.
     }
     
-    
-    @IBAction func unwindToSegue (segue : UIStoryboardSegue) {
-        var source: BlankJournalViewController = segue.sourceViewController as BlankJournalViewController
-        var newEntry = source.newEntry
-        if newEntry != nil {
-            entries.append(newEntry)
-            self.reloadInputViews()
-        }
-        
-    }
+
 
 
     override func didReceiveMemoryWarning() {

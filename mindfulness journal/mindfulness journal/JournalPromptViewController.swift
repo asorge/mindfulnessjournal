@@ -18,7 +18,8 @@ class JournalPromptViewController: UIViewController {
     
     var newEntry: JournalEntry!
     
-    @IBOutlet var journalText: UITextView!
+   
+    @IBOutlet var journalText: UITextField!
     @IBOutlet var journalPrompt: UILabel!
     @IBOutlet var doneButton: UIButton!
     
