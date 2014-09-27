@@ -9,10 +9,10 @@
 import UIKit
 
 class JournalPromptViewController: NewEntryViewController {
-   
-    @IBOutlet var journalText: UITextField!
-    @IBOutlet var journalPrompt: UILabel!
 
+    @IBOutlet var journalText: UITextField!
+    
+    
     @IBAction func doneButtonPress(sender: AnyObject) {
         delegate!.newJournalEntry(journalText!.text, creationTime: self.journalCreationTime)
         self.navigationController?.popViewControllerAnimated(true)
