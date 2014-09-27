@@ -22,6 +22,7 @@
 		0C929FE419D4E27E00CAC224 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C929FE219D4E27E00CAC224 /* LaunchScreen.xib */; };
 		0C929FF019D4E27E00CAC224 /* mindfulness_journalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C929FEF19D4E27E00CAC224 /* mindfulness_journalTests.swift */; };
 		834F9F6419D54A7400BA5BFC /* JournalNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834F9F6319D54A7400BA5BFC /* JournalNavigationViewController.swift */; };
+		83EB99B619D7385E0026A664 /* NewEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EB99B519D7385E0026A664 /* NewEntryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		0C929FEE19D4E27E00CAC224 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0C929FEF19D4E27E00CAC224 /* mindfulness_journalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mindfulness_journalTests.swift; sourceTree = "<group>"; };
 		834F9F6319D54A7400BA5BFC /* JournalNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JournalNavigationViewController.swift; sourceTree = "<group>"; };
+		83EB99B519D7385E0026A664 /* NewEntryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewEntryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				0C7B6F9219D4FD10007CC82E /* JournalCollectionViewController.swift */,
 				0C7B6F9419D4FD21007CC82E /* SettingsViewController.swift */,
 				0C7B6F9619D4FD2C007CC82E /* EntriesTableViewController.swift */,
+				83EB99B519D7385E0026A664 /* NewEntryViewController.swift */,
 				0C7B6F9819D4FD3D007CC82E /* BlankJournalViewController.swift */,
 				0C7B6F9A19D4FD49007CC82E /* JournalPromptViewController.swift */,
 				0C7B6F9C19D4FE71007CC82E /* JournalEntryViewController.swift */,
@@ -249,6 +252,7 @@
 				834F9F6419D54A7400BA5BFC /* JournalNavigationViewController.swift in Sources */,
 				0C929FDA19D4E27D00CAC224 /* FirstViewController.swift in Sources */,
 				0C7B6F9719D4FD2C007CC82E /* EntriesTableViewController.swift in Sources */,
+				83EB99B619D7385E0026A664 /* NewEntryViewController.swift in Sources */,
 				0C7B6F9D19D4FE71007CC82E /* JournalEntryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

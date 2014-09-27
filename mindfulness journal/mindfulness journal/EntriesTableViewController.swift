@@ -15,7 +15,7 @@ struct JournalEntry {
     var currDate : String
 }
 
-class EntriesTableViewController: UITableViewController, BlankJournalDelegate, JournalPromptDelegate  {
+class EntriesTableViewController: UITableViewController, NewEntryDelegate  {
 
     @IBAction func blankButton(sender: UIBarButtonItem) {
         
@@ -90,15 +90,11 @@ class EntriesTableViewController: UITableViewController, BlankJournalDelegate, J
             return
         }
         switch segue!.identifier {
-            case "blank":
-                var blankEntryViewController = segue!.destinationViewController as? BlankJournalViewController
-                blankEntryViewController?.delegate = self
-                break
-            
-            case "prompt":
-                var promptEntryViewController = segue!.destinationViewController as?
-                    JournalPromptViewController
-                promptEntryViewController?.delegate = self
+            case "prompt", "blank":
+                var newEntryViewController = segue!.destinationViewController as?
+                    NewEntryViewController
+                newEntryViewController?.delegate = self
+                //newEntryViewController?.setCreationTime()
                 break
         default:
             break
