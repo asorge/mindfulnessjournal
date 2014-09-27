@@ -9,7 +9,7 @@
 import UIKit
 
 protocol NewEntryDelegate {
-    func newJournalEntry(text: String)
+    func newJournalEntry(text: String, creationTime: String)
 }
 
 class NewEntryViewController: UIViewController {
@@ -25,6 +25,11 @@ class NewEntryViewController: UIViewController {
     var journalContents : String = ""
     
     var journalCreationTime : String = ""
+    
+    func setCreationTime() -> Void {
+        self.journalCreationTime = NSDateFormatter.localizedStringFromDate(NSDate(), dateStyle: .MediumStyle, timeStyle: .ShortStyle)
+    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()

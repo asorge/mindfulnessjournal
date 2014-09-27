@@ -12,7 +12,7 @@ import UIKit
 
 struct JournalEntry {
     var journalText : String
-    var currDate : String
+    var creationTime : String
 }
 
 class EntriesTableViewController: UITableViewController, NewEntryDelegate  {
@@ -25,8 +25,8 @@ class EntriesTableViewController: UITableViewController, NewEntryDelegate  {
         
     }
     
-    func newJournalEntry(text: String) {
-        self.entries.append(JournalEntry(journalText: text, currDate: "date"))
+    func newJournalEntry(text: String, creationTime: String) {
+        self.entries.append(JournalEntry(journalText: text, creationTime: creationTime))
     }
     
     var entries: [JournalEntry] = []
@@ -66,12 +66,6 @@ class EntriesTableViewController: UITableViewController, NewEntryDelegate  {
         // Dispose of any resources that can be recreated.
     }
     
-    func newJournalEntry(entry: String, prompt: String, date: String) {
-        var newEntry = JournalEntry(journalText: entry, currDate: date)
-        
-        
-    }
-    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.entries.count
     }
@@ -79,7 +73,7 @@ class EntriesTableViewController: UITableViewController, NewEntryDelegate  {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCellWithIdentifier("entry") as? NewJournalCellTableViewCell ?? NewJournalCellTableViewCell()
         var newEntry = self.entries[indexPath.row]
-        cell.journalName.text = newEntry.journalText
+        cell.journalName.text = newEntry.creationTime + ": " + newEntry.journalText
       
         
         return cell
@@ -94,7 +88,7 @@ class EntriesTableViewController: UITableViewController, NewEntryDelegate  {
                 var newEntryViewController = segue!.destinationViewController as?
                     NewEntryViewController
                 newEntryViewController?.delegate = self
-                //newEntryViewController?.setCreationTime()
+                newEntryViewController?.setCreationTime()
                 break
         default:
             break

@@ -15,7 +15,7 @@ class BlankJournalViewController: NewEntryViewController {
     @IBOutlet var journalText: UITextField!
 
     @IBAction func doneButtonPressed(sender: AnyObject) {
-        delegate!.newJournalEntry(journalText!.text)
+        delegate!.newJournalEntry(journalText!.text, creationTime: self.journalCreationTime)
         self.navigationController?.popViewControllerAnimated(true)
     }
    
