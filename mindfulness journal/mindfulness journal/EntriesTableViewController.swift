@@ -72,6 +72,10 @@ class EntriesTableViewController: UITableViewController, BlankJournalDelegate, J
         
     }
     
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return self.entries.count
+    }
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCellWithIdentifier("entry") as? NewJournalCellTableViewCell ?? NewJournalCellTableViewCell()
         var newEntry = self.entries[indexPath.row]
