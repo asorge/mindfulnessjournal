@@ -12,11 +12,14 @@ class JournalPromptViewController: NewEntryViewController {
    
     @IBOutlet var journalText: UITextField!
     @IBOutlet var journalPrompt: UILabel!
-    @IBOutlet var doneButton: UIButton!
-    
-    @IBAction func doneButtonPressed(sender: AnyObject) {
+
+    @IBAction func doneButtonPress(sender: AnyObject) {
         delegate!.newJournalEntry(journalText!.text, creationTime: self.journalCreationTime)
         self.navigationController?.popViewControllerAnimated(true)
+    }
+    
+    override func finalizeText() {
+        self.journalText.resignFirstResponder()
     }
     
     override func viewDidLoad() {

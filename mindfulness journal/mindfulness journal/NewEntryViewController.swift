@@ -17,6 +17,7 @@ class NewEntryViewController: UIViewController {
     
     var delegate: NewEntryDelegate!
     var newEntry : JournalEntry!
+    var tapRecognizer : UITapGestureRecognizer!
     
     func getPrompt() -> String {
         return "";
@@ -30,11 +31,22 @@ class NewEntryViewController: UIViewController {
         self.journalCreationTime = NSDateFormatter.localizedStringFromDate(NSDate(), dateStyle: .MediumStyle, timeStyle: .ShortStyle)
     }
 
+    func tapped(sender: UIGestureRecognizer) {
+        self.finalizeText()
+        
+    }
+    
+    func finalizeText() {
+        // Finalize any text fields
+        fatalError("This method must be overridden")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self.tapRecognizer = UITapGestureRecognizer()
+        self.view.addGestureRecognizer(self.tapRecognizer)
+        self.tapRecognizer.addTarget(self,  action: "tapped:")
     }
 
     override func didReceiveMemoryWarning() {
