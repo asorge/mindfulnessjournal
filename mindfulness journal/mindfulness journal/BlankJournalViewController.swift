@@ -9,7 +9,7 @@
 import UIKit
 
 protocol BlankJournalDelegate {
-    
+    func newJournalEntry(text: String)
 }
 class BlankJournalViewController: UIViewController {
     
@@ -25,7 +25,10 @@ class BlankJournalViewController: UIViewController {
     
     @IBOutlet var journalText: UITextField!
 
-    @IBOutlet var doneButton: UIButton!
+    @IBAction func doneButtonPressed(sender: AnyObject) {
+        delegate!.newJournalEntry(journalText!.text)
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
    
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,31 +41,4 @@ class BlankJournalViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        
-        if var secondViewController = segue.destinationViewController as? EntriesTableViewController {
-            if (sender as? UIButton != self.doneButton) {
-                return;
-            }
-            else {
-              
-                newEntry = JournalEntry(journalText: journalText.text, currDate: entryTitle.text!)
-            }
-        }
-        
-    }
-
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

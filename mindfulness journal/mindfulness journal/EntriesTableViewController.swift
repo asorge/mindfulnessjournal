@@ -25,9 +25,15 @@ class EntriesTableViewController: UITableViewController, BlankJournalDelegate, J
         
     }
     
+    func newJournalEntry(text: String) {
+        self.entries.append(JournalEntry(journalText: text, currDate: "date"))
+    }
+    
     var entries: [JournalEntry] = []
     
     @IBAction func unwindToSegue (segue : UIStoryboardSegue) {
+        // Called when coming back from a segue
+        /*
         var sourceOne: BlankJournalViewController = segue.sourceViewController as BlankJournalViewController
         var newEntryOne = sourceOne.newEntry
         if newEntryOne != nil {
@@ -40,7 +46,7 @@ class EntriesTableViewController: UITableViewController, BlankJournalDelegate, J
         if newEntryTwo != nil {
             entries.append(newEntryTwo)
             self.reloadInputViews()
-        }
+        }*/
         
     }
     
@@ -75,19 +81,25 @@ class EntriesTableViewController: UITableViewController, BlankJournalDelegate, J
         return cell
     }
     
-        
-
-    
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    override func prepareForSegue(segue: UIStoryboardSegue?, sender: AnyObject?) {
+        if (segue == nil) {
+            return
+        }
+        switch segue!.identifier {
+            case "blank":
+                var blankEntryViewController = segue!.destinationViewController as? BlankJournalViewController
+                blankEntryViewController?.delegate = self
+                break
+            
+            case "prompt":
+                var promptEntryViewController = segue!.destinationViewController as?
+                    JournalPromptViewController
+                promptEntryViewController?.delegate = self
+                break
+        default:
+            break
+            
+        }
     }
-    */
 
 }

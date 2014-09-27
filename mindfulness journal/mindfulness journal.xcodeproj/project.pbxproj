@@ -21,6 +21,7 @@
 		0C929FE119D4E27E00CAC224 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C929FE019D4E27E00CAC224 /* Images.xcassets */; };
 		0C929FE419D4E27E00CAC224 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C929FE219D4E27E00CAC224 /* LaunchScreen.xib */; };
 		0C929FF019D4E27E00CAC224 /* mindfulness_journalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C929FEF19D4E27E00CAC224 /* mindfulness_journalTests.swift */; };
+		834F9F6419D54A7400BA5BFC /* JournalNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834F9F6319D54A7400BA5BFC /* JournalNavigationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		0C929FE919D4E27E00CAC224 /* mindfulness journalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "mindfulness journalTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C929FEE19D4E27E00CAC224 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0C929FEF19D4E27E00CAC224 /* mindfulness_journalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mindfulness_journalTests.swift; sourceTree = "<group>"; };
+		834F9F6319D54A7400BA5BFC /* JournalNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JournalNavigationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 				0C7B6F9A19D4FD49007CC82E /* JournalPromptViewController.swift */,
 				0C7B6F9C19D4FE71007CC82E /* JournalEntryViewController.swift */,
 				0C7B6F9E19D5080A007CC82E /* NewJournalCellTableViewCell.swift */,
+				834F9F6319D54A7400BA5BFC /* JournalNavigationViewController.swift */,
 			);
 			path = "mindfulness journal";
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 				0C929FD819D4E27D00CAC224 /* AppDelegate.swift in Sources */,
 				0C7B6F9519D4FD21007CC82E /* SettingsViewController.swift in Sources */,
 				0C7B6F9F19D5080A007CC82E /* NewJournalCellTableViewCell.swift in Sources */,
+				834F9F6419D54A7400BA5BFC /* JournalNavigationViewController.swift in Sources */,
 				0C929FDA19D4E27D00CAC224 /* FirstViewController.swift in Sources */,
 				0C7B6F9719D4FD2C007CC82E /* EntriesTableViewController.swift in Sources */,
 				0C7B6F9D19D4FE71007CC82E /* JournalEntryViewController.swift in Sources */,
