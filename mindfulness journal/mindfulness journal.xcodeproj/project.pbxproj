@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0C38EDC219D783A6009CB1F4 /* staymindful.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C38EDC119D783A6009CB1F4 /* staymindful.png */; };
 		0C7B6F9319D4FD10007CC82E /* JournalCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7B6F9219D4FD10007CC82E /* JournalCollectionViewController.swift */; };
 		0C7B6F9519D4FD21007CC82E /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7B6F9419D4FD21007CC82E /* SettingsViewController.swift */; };
 		0C7B6F9719D4FD2C007CC82E /* EntriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7B6F9619D4FD2C007CC82E /* EntriesTableViewController.swift */; };
@@ -47,7 +46,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0C38EDC119D783A6009CB1F4 /* staymindful.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = staymindful.png; sourceTree = "<group>"; };
 		0C7B6F9219D4FD10007CC82E /* JournalCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JournalCollectionViewController.swift; sourceTree = "<group>"; };
 		0C7B6F9419D4FD21007CC82E /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		0C7B6F9619D4FD2C007CC82E /* EntriesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntriesTableViewController.swift; sourceTree = "<group>"; };
@@ -119,12 +117,15 @@
 		0C929FD419D4E27D00CAC224 /* mindfulness journal */ = {
 			isa = PBXGroup;
 			children = (
+<<<<<<< HEAD
 				0CE67E0819D7D51100D74F45 /* Base.lproj */,
 				0CE67E0019D7D4E500D74F45 /* GoalTableView.swift */,
 				0CE67E0119D7D4E500D74F45 /* GoalTableViewCell.swift */,
 				0CE67E0219D7D4E500D74F45 /* GoalTableViewController.swift */,
 				0CE67E0319D7D4E500D74F45 /* NewGoalViewController.swift */,
 				0C38EDC119D783A6009CB1F4 /* staymindful.png */,
+=======
+>>>>>>> parent of 0af8a6e... Merge branch 'master' of https://github.com/asorge/mindfulnessjournal
 				0C929FD719D4E27D00CAC224 /* AppDelegate.swift */,
 				0C929FD919D4E27D00CAC224 /* FirstViewController.swift */,
 				0C929FDB19D4E27D00CAC224 /* SecondViewController.swift */,
@@ -266,8 +267,11 @@
 				0CE67E0D19D7D51100D74F45 /* LaunchScreen.xib in Resources */,
 				0C929FDF19D4E27D00CAC224 /* Main.storyboard in Resources */,
 				0C929FE419D4E27E00CAC224 /* LaunchScreen.xib in Resources */,
+<<<<<<< HEAD
 				0CE67E0E19D7D51100D74F45 /* Main.storyboard in Resources */,
 				0C38EDC219D783A6009CB1F4 /* staymindful.png in Resources */,
+=======
+>>>>>>> parent of 0af8a6e... Merge branch 'master' of https://github.com/asorge/mindfulnessjournal
 				0C929FE119D4E27E00CAC224 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

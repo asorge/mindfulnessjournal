@@ -31,9 +31,6 @@ class EntriesTableViewController: UITableViewController, NewEntryDelegate  {
     
     var entries: [JournalEntry] = []
     
-    @IBOutlet var titleImageView: UIImageView!
-    var titleImage : UIImage = UIImage(named: "staymindful")
-    
     @IBAction func unwindToSegue (segue : UIStoryboardSegue) {
         // Called when coming back from a segue
         /*
@@ -55,8 +52,6 @@ class EntriesTableViewController: UITableViewController, NewEntryDelegate  {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.titleImageView.clipsToBounds = true
-     
        // self.tableView.delegate = self;
        // self.tableView.dataSource = self;
 
