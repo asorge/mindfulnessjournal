@@ -79,7 +79,6 @@ class EntriesTableViewController: UITableViewController, NewEntryDelegate  {
         var cell = tableView.dequeueReusableCellWithIdentifier("entry") as? NewJournalCellTableViewCell ?? NewJournalCellTableViewCell()
         var newEntry = self.entries[indexPath.row]
         cell.journalName.text = newEntry.creationTime + ": " + newEntry.journalText
-      
         
         return cell
     }

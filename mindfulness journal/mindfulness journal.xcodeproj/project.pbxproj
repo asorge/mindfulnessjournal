@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		0C38EDC219D783A6009CB1F4 /* staymindful.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C38EDC119D783A6009CB1F4 /* staymindful.png */; };
+		0C38EDC619D79282009CB1F4 /* icon1.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C38EDC519D79282009CB1F4 /* icon1.png */; };
+		0C38EDC919D79307009CB1F4 /* icon2.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C38EDC719D79307009CB1F4 /* icon2.png */; };
+		0C38EDCA19D79307009CB1F4 /* icon3.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C38EDC819D79307009CB1F4 /* icon3.png */; };
+		0C38EDCC19D796D4009CB1F4 /* JournalCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C38EDCB19D796D4009CB1F4 /* JournalCollectionViewCell.swift */; };
+		0C38EDCE19D79AF8009CB1F4 /* JournalCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C38EDCD19D79AF8009CB1F4 /* JournalCollectionView.swift */; };
+		0C38EDD019D7A58C009CB1F4 /* GoalTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C38EDCF19D7A58C009CB1F4 /* GoalTableViewController.swift */; };
+		0C38EDD219D7A697009CB1F4 /* GoalTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C38EDD119D7A697009CB1F4 /* GoalTableView.swift */; };
+		0C38EDD419D7A919009CB1F4 /* NewGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C38EDD319D7A919009CB1F4 /* NewGoalViewController.swift */; };
+		0C38EDD619D7AD3C009CB1F4 /* GoalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C38EDD519D7AD3C009CB1F4 /* GoalTableViewCell.swift */; };
 		0C7B6F9319D4FD10007CC82E /* JournalCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7B6F9219D4FD10007CC82E /* JournalCollectionViewController.swift */; };
 		0C7B6F9519D4FD21007CC82E /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7B6F9419D4FD21007CC82E /* SettingsViewController.swift */; };
 		0C7B6F9719D4FD2C007CC82E /* EntriesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7B6F9619D4FD2C007CC82E /* EntriesTableViewController.swift */; };
@@ -38,6 +47,15 @@
 
 /* Begin PBXFileReference section */
 		0C38EDC119D783A6009CB1F4 /* staymindful.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = staymindful.png; sourceTree = "<group>"; };
+		0C38EDC519D79282009CB1F4 /* icon1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon1.png; sourceTree = "<group>"; };
+		0C38EDC719D79307009CB1F4 /* icon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon2.png; sourceTree = "<group>"; };
+		0C38EDC819D79307009CB1F4 /* icon3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon3.png; sourceTree = "<group>"; };
+		0C38EDCB19D796D4009CB1F4 /* JournalCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JournalCollectionViewCell.swift; sourceTree = "<group>"; };
+		0C38EDCD19D79AF8009CB1F4 /* JournalCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JournalCollectionView.swift; sourceTree = "<group>"; };
+		0C38EDCF19D7A58C009CB1F4 /* GoalTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalTableViewController.swift; sourceTree = "<group>"; };
+		0C38EDD119D7A697009CB1F4 /* GoalTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalTableView.swift; sourceTree = "<group>"; };
+		0C38EDD319D7A919009CB1F4 /* NewGoalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewGoalViewController.swift; sourceTree = "<group>"; };
+		0C38EDD519D7AD3C009CB1F4 /* GoalTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoalTableViewCell.swift; sourceTree = "<group>"; };
 		0C7B6F9219D4FD10007CC82E /* JournalCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JournalCollectionViewController.swift; sourceTree = "<group>"; };
 		0C7B6F9419D4FD21007CC82E /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		0C7B6F9619D4FD2C007CC82E /* EntriesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntriesTableViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +117,9 @@
 		0C929FD419D4E27D00CAC224 /* mindfulness journal */ = {
 			isa = PBXGroup;
 			children = (
+				0C38EDC719D79307009CB1F4 /* icon2.png */,
+				0C38EDC819D79307009CB1F4 /* icon3.png */,
+				0C38EDC519D79282009CB1F4 /* icon1.png */,
 				0C38EDC119D783A6009CB1F4 /* staymindful.png */,
 				0C929FD719D4E27D00CAC224 /* AppDelegate.swift */,
 				0C929FD919D4E27D00CAC224 /* FirstViewController.swift */,
@@ -116,6 +137,12 @@
 				0C7B6F9C19D4FE71007CC82E /* JournalEntryViewController.swift */,
 				0C7B6F9E19D5080A007CC82E /* NewJournalCellTableViewCell.swift */,
 				834F9F6319D54A7400BA5BFC /* JournalNavigationViewController.swift */,
+				0C38EDCB19D796D4009CB1F4 /* JournalCollectionViewCell.swift */,
+				0C38EDCD19D79AF8009CB1F4 /* JournalCollectionView.swift */,
+				0C38EDCF19D7A58C009CB1F4 /* GoalTableViewController.swift */,
+				0C38EDD119D7A697009CB1F4 /* GoalTableView.swift */,
+				0C38EDD319D7A919009CB1F4 /* NewGoalViewController.swift */,
+				0C38EDD519D7AD3C009CB1F4 /* GoalTableViewCell.swift */,
 			);
 			path = "mindfulness journal";
 			sourceTree = "<group>";
@@ -227,8 +254,11 @@
 			files = (
 				0C929FDF19D4E27D00CAC224 /* Main.storyboard in Resources */,
 				0C929FE419D4E27E00CAC224 /* LaunchScreen.xib in Resources */,
+				0C38EDCA19D79307009CB1F4 /* icon3.png in Resources */,
 				0C38EDC219D783A6009CB1F4 /* staymindful.png in Resources */,
+				0C38EDC619D79282009CB1F4 /* icon1.png in Resources */,
 				0C929FE119D4E27E00CAC224 /* Images.xcassets in Resources */,
+				0C38EDC919D79307009CB1F4 /* icon2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,12 +276,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C38EDCE19D79AF8009CB1F4 /* JournalCollectionView.swift in Sources */,
+				0C38EDD419D7A919009CB1F4 /* NewGoalViewController.swift in Sources */,
 				0C7B6F9B19D4FD49007CC82E /* JournalPromptViewController.swift in Sources */,
 				0C7B6F9919D4FD3D007CC82E /* BlankJournalViewController.swift in Sources */,
 				0C7B6F9319D4FD10007CC82E /* JournalCollectionViewController.swift in Sources */,
+				0C38EDD219D7A697009CB1F4 /* GoalTableView.swift in Sources */,
 				0C929FDC19D4E27D00CAC224 /* SecondViewController.swift in Sources */,
 				0C929FD819D4E27D00CAC224 /* AppDelegate.swift in Sources */,
 				0C7B6F9519D4FD21007CC82E /* SettingsViewController.swift in Sources */,
+				0C38EDD019D7A58C009CB1F4 /* GoalTableViewController.swift in Sources */,
+				0C38EDD619D7AD3C009CB1F4 /* GoalTableViewCell.swift in Sources */,
+				0C38EDCC19D796D4009CB1F4 /* JournalCollectionViewCell.swift in Sources */,
 				0C7B6F9F19D5080A007CC82E /* NewJournalCellTableViewCell.swift in Sources */,
 				834F9F6419D54A7400BA5BFC /* JournalNavigationViewController.swift in Sources */,
 				0C929FDA19D4E27D00CAC224 /* FirstViewController.swift in Sources */,

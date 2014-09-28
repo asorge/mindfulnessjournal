@@ -1,24 +1,43 @@
 //
-//  SettingsViewController.swift
+//  NewGoalViewController.swift
 //  mindfulness journal
 //
-//  Created by Ally Sorge on 9/25/14.
+//  Created by Ally Sorge on 9/27/14.
 //  Copyright (c) 2014 Ally Sorge. All rights reserved.
 //
 
 import UIKit
 
-protocol SettingsDelegate {}
+protocol NewGoalDelegate {
+    func newGoal(text: String, date: String)
+}
 
-class SettingsViewController: UITableViewController {
+class NewGoalViewController: UIViewController {
     
-    var delegate : SettingsDelegate!
+    var delegate: NewGoalDelegate!
+
+    @IBOutlet var newGoalText: UITextField!
     
-    @IBAction func backButton(sender: AnyObject) {
+    @IBOutlet var goalDate: UILabel!
+    
+    var goalCreationTime : String = ""
+    
+    @IBAction func doneButton(sender: AnyObject) {
+        delegate!.newGoal(newGoalText.text, date: goalDate.text!)
         self.navigationController?.popViewControllerAnimated(true)
     }
+    
+    func setCreationTime() -> Void {
+        goalCreationTime = NSDateFormatter.localizedStringFromDate(NSDate(), dateStyle: .MediumStyle, timeStyle: .ShortStyle)
+        
+        
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        setCreationTime()
+        goalDate.text = goalCreationTime
 
         // Do any additional setup after loading the view.
     }
@@ -28,7 +47,6 @@ class SettingsViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
-   
 
     /*
     // MARK: - Navigation
