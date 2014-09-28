@@ -23,6 +23,10 @@
 		0C929FF019D4E27E00CAC224 /* mindfulness_journalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C929FEF19D4E27E00CAC224 /* mindfulness_journalTests.swift */; };
 		834F9F6419D54A7400BA5BFC /* JournalNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834F9F6319D54A7400BA5BFC /* JournalNavigationViewController.swift */; };
 		83EB99B619D7385E0026A664 /* NewEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EB99B519D7385E0026A664 /* NewEntryViewController.swift */; };
+		83EB99BE19D77D1A0026A664 /* ObservationsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EB99BD19D77D1A0026A664 /* ObservationsViewController.swift */; };
+		83EB99C019D77E8A0026A664 /* ObservationsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EB99BF19D77E8A0026A664 /* ObservationsTableView.swift */; };
+		83EB99C219D783D40026A664 /* NewObsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EB99C119D783D40026A664 /* NewObsCell.swift */; };
+		83EB99C419D784820026A664 /* ObsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83EB99C319D784820026A664 /* ObsViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +60,10 @@
 		0C929FEF19D4E27E00CAC224 /* mindfulness_journalTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mindfulness_journalTests.swift; sourceTree = "<group>"; };
 		834F9F6319D54A7400BA5BFC /* JournalNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JournalNavigationViewController.swift; sourceTree = "<group>"; };
 		83EB99B519D7385E0026A664 /* NewEntryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewEntryViewController.swift; sourceTree = "<group>"; };
+		83EB99BD19D77D1A0026A664 /* ObservationsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObservationsViewController.swift; sourceTree = "<group>"; };
+		83EB99BF19D77E8A0026A664 /* ObservationsTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObservationsTableView.swift; sourceTree = "<group>"; };
+		83EB99C119D783D40026A664 /* NewObsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewObsCell.swift; sourceTree = "<group>"; };
+		83EB99C319D784820026A664 /* ObsViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ObsViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +115,11 @@
 				0C7B6F9219D4FD10007CC82E /* JournalCollectionViewController.swift */,
 				0C7B6F9419D4FD21007CC82E /* SettingsViewController.swift */,
 				0C7B6F9619D4FD2C007CC82E /* EntriesTableViewController.swift */,
+				83EB99BF19D77E8A0026A664 /* ObservationsTableView.swift */,
+				83EB99C119D783D40026A664 /* NewObsCell.swift */,
+				83EB99C319D784820026A664 /* ObsViewCell.swift */,
 				83EB99B519D7385E0026A664 /* NewEntryViewController.swift */,
+				83EB99BD19D77D1A0026A664 /* ObservationsViewController.swift */,
 				0C7B6F9819D4FD3D007CC82E /* BlankJournalViewController.swift */,
 				0C7B6F9A19D4FD49007CC82E /* JournalPromptViewController.swift */,
 				0C7B6F9C19D4FE71007CC82E /* JournalEntryViewController.swift */,
@@ -245,11 +257,15 @@
 				0C7B6F9B19D4FD49007CC82E /* JournalPromptViewController.swift in Sources */,
 				0C7B6F9919D4FD3D007CC82E /* BlankJournalViewController.swift in Sources */,
 				0C7B6F9319D4FD10007CC82E /* JournalCollectionViewController.swift in Sources */,
+				83EB99BE19D77D1A0026A664 /* ObservationsViewController.swift in Sources */,
 				0C929FDC19D4E27D00CAC224 /* SecondViewController.swift in Sources */,
 				0C929FD819D4E27D00CAC224 /* AppDelegate.swift in Sources */,
 				0C7B6F9519D4FD21007CC82E /* SettingsViewController.swift in Sources */,
+				83EB99C219D783D40026A664 /* NewObsCell.swift in Sources */,
 				0C7B6F9F19D5080A007CC82E /* NewJournalCellTableViewCell.swift in Sources */,
+				83EB99C019D77E8A0026A664 /* ObservationsTableView.swift in Sources */,
 				834F9F6419D54A7400BA5BFC /* JournalNavigationViewController.swift in Sources */,
+				83EB99C419D784820026A664 /* ObsViewCell.swift in Sources */,
 				0C929FDA19D4E27D00CAC224 /* FirstViewController.swift in Sources */,
 				0C7B6F9719D4FD2C007CC82E /* EntriesTableViewController.swift in Sources */,
 				83EB99B619D7385E0026A664 /* NewEntryViewController.swift in Sources */,
